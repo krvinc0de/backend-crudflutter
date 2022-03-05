@@ -2,12 +2,7 @@ const mongose = require('mongoose');
 const dbConection = async() => {
     try {
         console.log('Conectando DB..............................................');
-        await mongose.connect('mongodb://localhost/apiClients', {
-            useCreateIndex: true,
-            useFindAndModify: false,
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        });
+        await mongose.connect('mongodb://localhost/crudflutter');
         console.log('CONECTADO...................................................');
 
     } catch (error) {
