@@ -4,9 +4,7 @@ const agregarclientes = async (req, res) => {
     console.log(req.body);
     res.json({
        cliente: await clienteService.guardarcliente(req.body)
-
     })
-
 }
 
 const consultarclientes = async(req, res) => {
@@ -26,7 +24,5 @@ const eliminarcliente = async(req, res) => {
         cliente: await clienteService.eliminarcliente(req.params.id)
     })
 }
-
-
 
 module.exports = {consultarclientes, agregarclientes, modificarcliente, eliminarcliente};
